@@ -1,0 +1,118 @@
+main {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right top,
+    var(--color-green-four-bg),
+    var(--color-green-five-bg)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass {
+  min-height: 80vh;
+  width: 80%;
+  background: var(--color-green-three-bg);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(1rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+
+.circle1 {
+  bottom: 2%;
+  right: 1%;
+  background: var(--color-white);
+  background: linear-gradient(
+    to right bottom,
+    rgba(2, 182, 237, 0.7),
+    rgba(2, 182, 237, 0.3)
+  );
+  height: 25rem;
+  width: 25rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle2 {
+  top: 2%;
+  left: 1%;
+  bottom: 2%;
+  right: 1%;
+  background: var(--color-white);
+  background: linear-gradient(
+    to right bottom,
+    rgba(51, 237, 147, 0.7),
+    rgba(51, 237, 147, 0.3)
+  );
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.logo {
+  margin: 2rem;
+  color: var(--color-green-four-bg);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.logo > h1 > span {
+  color: var(--color-green-three-bg);
+}
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  padding: 1rem ;
+}
+.text {
+  display: inline-block;
+  max-width: 35rem;
+  margin:0 2rem;
+  margin-bottom: 10rem;
+}
+.text {
+  flex: 1;
+}
+.text > h3 {
+  color: var(--dark-grey);
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+.text >h4{
+  color: var(--color-green-six-bg);
+  margin-top: 1rem;
+}
+.text > h1 {
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(
+    var(--color-green-six-bg),
+    var(--color-green-five-bg)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.image {
+  margin: 1rem;
+}
+.image > img {
+  height: 20rem;
+  width: 20rem;
+}
+.btn_Join{
+  color: var(--color-white);
+  background: linear-gradient(
+    to right top,
+    var(--color-green-four-bg),
+    var(--color-green-five-bg)
+  );
+  margin-top:1rem;
+}
