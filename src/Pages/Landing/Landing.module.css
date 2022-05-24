@@ -76,7 +76,6 @@ main {
   display: inline-block;
   max-width: 35rem;
   margin:0 2rem;
-  margin-bottom: 10rem;
 }
 .text {
   flex: 1;
