@@ -5,10 +5,31 @@
   --color-green-four-bg:#02b6ed;
   --color-green-five-bg:rgb(27, 248, 147);
   --color-green-six-bg:#4E3DF2;
+  --color-green-seven-bg:#0EE836;
   --color-white:#FFFF;
+  --color-text:#0417D9;
+  --color-border:#0DC5F0;
+  
 }
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body{
+  background: linear-gradient(
+    to right top,
+    var(--color-green-four-bg),
+    var(--color-green-five-bg)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
