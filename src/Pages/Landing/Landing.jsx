@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { hero } from "../../Assets";
 import styles from "./Landing.module.css";
 
@@ -16,8 +17,10 @@ const Landing = () => {
             <h3>
               Experience the beautiful simple note-taking app on the web today.
             </h3>
-            <button className={` btn ${styles.btn_Join}`}>Join Now</button>
-            <h4>Already have an account ?</h4>
+            <Link to='/signup'>
+            <button className={` btn ${styles.btn_Join}`}>Join Now</button></Link>
+            <Link to='/login'>
+            <h4>Already have an account ?</h4></Link>
           </div>
           <div className={styles.image}>
               <img src={hero} alt="" />
