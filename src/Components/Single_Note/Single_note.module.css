@@ -18,6 +18,9 @@
   font-family: "Roboto", serif;
   margin-top: 1rem;
 }
+.note p{
+  word-break: break-word;
+}
 .icon {
   padding: 1rem;
   cursor: pointer;
