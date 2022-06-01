@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@100;300&family=Roboto:wght@100&display=swap");
+.side_menu {
+  width: 12rem;
+  height: 100vh;
+  position: fixed;
+  top: 4rem;
+  padding: 1rem;
+}
+.menu_item {
+  padding: 2px;
+  color: var(--color-text1);
+  font-weight: 600;
+  opacity: 0.8;
+  font-family: "Poppins", serif;
+  padding: 0.5rem;
+}
+
+.side_menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.menu_item i{
+ margin-right: 1rem;
+}
+li:hover{
+  border-left: 2px solid var(--color-border);
+}
+.btn_note{
+  color: var(--color-white);
+  background: linear-gradient(
+    to right top,
+    var(--color-green-four-bg),
+    var(--color-green-five-bg)
+  );
+}

@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Landing, Login, Signup } from "./Pages";
+import { Archive, Home, Landing, Login, Signup } from "./Pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { RequireAuth } from "./Components";
 
 function App() {
+  // const location = useLocation();
   return (
     <div className="App">
       <ToastContainer
@@ -24,6 +26,22 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/home"
+          element={
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/archive"
+          element={
+            <RequireAuth>
+              <Archive />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </div>
   );

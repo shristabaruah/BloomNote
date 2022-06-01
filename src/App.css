@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 :root{
   --color-green-one-bg:#2AE7F7;
   --color-green-two-bg:#24D6B3;
@@ -9,6 +10,8 @@
   --color-white:#FFFF;
   --color-text:#0417D9;
   --color-border:#0DC5F0;
+  --color-text1:#426696;
+  --color-light-grey:#d3d3d3;
   
 }
 *{
@@ -32,4 +35,15 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+.glass{
+  background: var(--color-white);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  z-index: 2;
+}
+.pg{
+  margin: 5rem 0rem 0 14rem;
+}

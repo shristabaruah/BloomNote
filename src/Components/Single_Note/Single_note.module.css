@@ -1,0 +1,64 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30.5rem;
+  width: 100%;
+  background: var(--color-white);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 8px;
+  border: 2px solid var(--color-light-grey);
+  height: fit-content;
+  padding: 1rem;
+  color: var(--black);
+  font-family: "Roboto", serif;
+  margin-top: 1rem;
+}
+.note p{
+  word-break: break-word;
+}
+.icon {
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--color-card-overlay-text-bg);
+}
+.priority {
+  color: var(--color-card-overlay-text-bg);
+}
+.icon:hover {
+  border-radius: 50%;
+  background-color: var(--color-light-grey);
+}
+.note_option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.note_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.title_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-family: "Roboto slab", serif;
+  font-size: 1rem;
+}
+.label_container {
+  display: flex;
+  gap: 0.5rem;
+}
+.label {
+  padding: 0.5rem;
+  background-color: var(--color-hover-light-grey);
+  border-radius: 15px;
+}

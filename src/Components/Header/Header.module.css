@@ -1,0 +1,32 @@
+.header{
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+}
+.logo{
+    color: var(--color-green-four-bg);
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.logo > h1 > span {
+    color: var(--color-green-three-bg);
+  }
+  .btn_Logout{
+      font-size: 1rem;
+      background-color: var(--color-green-four-bg);
+      background: linear-gradient(
+        to right top,
+        var(--color-green-four-bg),
+        var(--color-green-six-bg)
+      );
+  }
+  
