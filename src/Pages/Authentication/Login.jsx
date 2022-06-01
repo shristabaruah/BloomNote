@@ -39,7 +39,7 @@ const Login = () => {
           },
         });
         toast.success(`Welcome back ${response.data.foundUser.firstName}`);
-        navigate("/");
+        navigate("/home");
       } else {
         throw new Error("Something went wrong !! ...Try again later");
       }
