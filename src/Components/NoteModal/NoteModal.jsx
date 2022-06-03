@@ -13,8 +13,6 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
     noteData?.noteText ? noteData?.noteText : ""
   );
 
-  const note = { noteTitle, noteText, date: new Date().toString() };
-
   const {
     authState: { token },
   } = useAuth();
@@ -22,7 +20,11 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
 
   const addNoteHandler = () => {
     if (noteTitle.trim().length > 0 && noteText.trim().length > 0) {
-      addNoteService(token, note, noteDispatch);
+      addNoteService(
+        token,
+        { noteTitle, noteText, date: new Date().toString(), label: [] },
+        noteDispatch
+      );
       setModalOpen((prev) => !prev);
     } else {
       toast.error("Title or Text should not be empty");
@@ -31,7 +33,12 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
 
   const editNoteHandler = () => {
     if (noteTitle.trim().length > 0 && noteText.trim().length > 0) {
-      EditNoteService(noteData._id, token, note, noteDispatch);
+      EditNoteService(
+        noteData._id,
+        token,
+        { noteTitle, noteText, date: new Date().toString() },
+        noteDispatch
+      );
       setModalOpen((prev) => !prev);
     }
   };
@@ -65,11 +72,23 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
         />
+        {noteData?.label.length > 0 && (
+          <div className={styles.label_container}>
+            {noteData.label.map((item, index) => (
+              <label className={styles.label} key={index}>
+                {item}
+              </label>
+            ))}
+          </div>
+        )}
         <div className={styles.note_items}>
           {addNote ? (
             <AddNoteOption addNoteHandler={addNoteHandler} />
           ) : (
-            <EditNoteOption editNoteHandler={editNoteHandler} />
+            <EditNoteOption
+              editNoteHandler={editNoteHandler}
+              noteData={noteData}
+            />
           )}
         </div>
       </div>

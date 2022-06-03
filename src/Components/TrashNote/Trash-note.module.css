@@ -18,19 +18,15 @@
   font-family: "Roboto", serif;
   margin-top: 1rem;
 }
-.note p{
+.note p {
   word-break: break-word;
 }
 .icon {
-  padding: 1rem;
   cursor: pointer;
   color: var(--color-card-overlay-text-bg);
 }
-.priority {
-  color: var(--color-card-overlay-text-bg);
-}
+
 .icon:hover {
-  border-radius: 50%;
   background-color: var(--color-light-grey);
 }
 .note_option {
@@ -56,7 +52,6 @@
 .label_container {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
 }
 .label {
   padding: 0.5rem;

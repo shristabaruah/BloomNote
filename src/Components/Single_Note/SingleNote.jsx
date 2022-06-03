@@ -1,24 +1,18 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useAuth, useNote } from "../../Contexts";
-import { ArchiveNoteService, Notedate } from "../../utils";
+import { Notedate } from "../../utils";
+import { ArchiveIcon } from "../Icon/ArchiveIcon";
+import { LabelIcon } from "../Icon/LabelIcon";
+import { TrashIcon } from "../Icon/TrashIcon";
+import { UnarchiveIcon } from "../Icon/UnArchiveIcon";
 import { NoteModal } from "../NoteModal/NoteModal";
 import styles from "./Single_note.module.css";
 
 const SingleNote = ({ noteData }) => {
-  const { _id, noteTitle, noteText, date } = noteData;
+  const { _id, noteTitle, noteText, date, label } = noteData;
   const [editNote, setEditNote] = useState(false);
 
-  const {
-    authState: { token },
-  } = useAuth();
-  const { noteDispatch } = useNote();
-
   const location = useLocation();
-
-  const ArchiveHandler = () => {
-    ArchiveNoteService(_id, token, noteData, noteDispatch);
-  };
 
   return (
     <>
@@ -32,10 +26,11 @@ const SingleNote = ({ noteData }) => {
 
         <p>{noteText}</p>
         <div className={styles.label_container}>
-          <label className={styles.label}>hello</label>
-          <label className={styles.label}>hello</label>
-          <label className={styles.label}>hello</label>
-          <label className={styles.label}>hello</label>
+          {label.map((item, index) => (
+            <label className={styles.label} key={index}>
+              {item}
+            </label>
+          ))}
         </div>
 
         <div className={styles.note_items}>
@@ -45,15 +40,11 @@ const SingleNote = ({ noteData }) => {
             <span className={`material-icons-outlined ${styles.icon}`}>
               palette
             </span>
-            <span className={`material-icons-outlined ${styles.icon}`}>
-              label
-            </span>
+           <LabelIcon noteData={noteData}/>
             {location.pathname === "/archive" ? (
-              <span className={`material-icons-outlined ${styles.icon}`}>unarchive</span>
+              <UnarchiveIcon noteId={_id} />
             ) : (
-              <span className={`material-icons-outlined ${styles.icon}`} onClick={ArchiveHandler}>
-                archive
-              </span>
+              <ArchiveIcon noteId={_id} noteData={noteData} />
             )}
 
             <span
@@ -62,9 +53,7 @@ const SingleNote = ({ noteData }) => {
             >
               edit
             </span>
-            <span className={`material-icons-outlined ${styles.icon}`}>
-              delete
-            </span>
+            <TrashIcon noteId={_id} />
             {editNote && (
               <NoteModal setModalOpen={setEditNote} noteData={noteData} />
             )}

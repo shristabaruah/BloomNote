@@ -1,6 +1,11 @@
+import { useLocation } from "react-router-dom";
+import { ArchiveIcon } from "../Icon/ArchiveIcon";
+import { LabelIcon } from "../Icon/LabelIcon";
+import { UnarchiveIcon } from "../Icon/UnArchiveIcon";
 import styles from "./Note-option.module.css";
 
-const EditNoteOption = ({ editNoteHandler }) => {
+const EditNoteOption = ({ editNoteHandler, noteData }) => {
+  const location = useLocation();
   return (
     <>
       <div className={styles.note_option}>
@@ -8,10 +13,12 @@ const EditNoteOption = ({ editNoteHandler }) => {
         <span className={`material-icons-outlined ${styles.icon}`}>
           palette
         </span>
-        <span className={`material-icons-outlined ${styles.icon}`}>label</span>
-        <span className={`material-icons-outlined ${styles.icon}`}>
-          archive
-        </span>
+        <LabelIcon noteData={noteData} styleData={{bottom:"-4rem"}}/>
+        {location.pathname === "/archive" ? (
+          <UnarchiveIcon noteId={noteData._id} />
+        ) : (
+          <ArchiveIcon noteId={noteData._id} noteData={noteData} />
+        )}
         <span className={`material-icons-outlined ${styles.icon}`}>delete</span>
       </div>
       <div>
