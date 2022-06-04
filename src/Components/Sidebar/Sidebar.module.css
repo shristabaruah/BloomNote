@@ -23,17 +23,23 @@
   font-size: 1.2rem;
   margin: 1rem 0;
 }
-.menu_item i{
- margin-right: 1rem;
+.menu_item i {
+  margin-right: 1rem;
 }
-li:hover{
+li:hover {
   border-left: 2px solid var(--color-border);
 }
-.btn_note{
+.btn_note {
   color: var(--color-white);
   background: linear-gradient(
     to right top,
     var(--color-green-four-bg),
     var(--color-green-five-bg)
   );
+}
+.icon {
+  margin-right: 1rem;
+}
+span {
+  word-break: break-word;
 }

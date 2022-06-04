@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Archive, Home, Landing, Login, Signup } from "./Pages";
+import { Archive, Home, Label, Landing, Login, Signup, Trash } from "./Pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { RequireAuth } from "./Components";
@@ -39,6 +39,22 @@ function App() {
           element={
             <RequireAuth>
               <Archive />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/trash"
+          element={
+            <RequireAuth>
+              <Trash />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/label/:labelName"
+          element={
+            <RequireAuth>
+              <Label />
             </RequireAuth>
           }
         />
