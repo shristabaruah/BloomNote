@@ -35,7 +35,10 @@ const NoteReducer = (state, action) => {
     case "DELETE_TRASH":
       return { ...state, trash: action.payload };
     case "ADD_NEW_LABEL":
-      return {...state ,label:[...state.label ,{id:uuid(),label:action.payload}]}
+      return {
+        ...state,
+        label: [...state.label, { id: uuid(), label: action.payload }],
+      };
     case "DELETE_LABEL":
       return {
         ...state,
@@ -47,6 +50,24 @@ const NoteReducer = (state, action) => {
         label: state.label.map((item) =>
           item.id === action.payload.id
             ? { id: item.id, label: action.payload.newLabel }
+            : item
+        ),
+      };
+    case "NOTE_BGCOLOR":
+      return {
+        ...state,
+        notes: state.notes.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, noteBgColor: action.payload.newColor }
+            : item
+        ),
+      };
+    case "NOTE_PRI0RITY":
+      return {
+        ...state,
+        notes: state.notes.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, notePriority: action.payload.priority }
             : item
         ),
       };

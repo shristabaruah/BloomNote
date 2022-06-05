@@ -7,7 +7,7 @@
   border-radius: 50%;
   background-color: var(--grey-background);
 }
-.label_menu{
+.label_menu {
   position: absolute;
   padding: 1rem;
   bottom: 28%;
@@ -22,14 +22,61 @@
 }
 .label {
   font-size: 1rem;
-  margin-left:4px;
+  margin-left: 4px;
 }
 
-.option input{
+.option input {
   cursor: pointer;
 }
-input[type="checkbox"]{
-height: 15px;
-width: 15px;
-accent-color: var(--color-light-grey);
+input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  accent-color: var(--color-light-grey);
+}
+.pallete_container {
+  position: absolute;
+  background: var(--color-white);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: 2px solid var(--color-light-grey);
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.circle_ring {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.priority_option {
+  position: absolute;
+  padding: 1rem;
+  background: var(--color-white);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: 2px solid var(--color-light-grey);
+}
+.priority_menu input {
+  cursor: pointer;
+  margin-right: 4px;
+}
+.priority_label {
+  font-size: 1rem;
+}
+.priority {
+  cursor: pointer;
+}
+.priority:hover {
+  color: var(--ivory-white);
 }

@@ -3,9 +3,7 @@
   cursor: pointer;
   color: var(--ivory-white);
 }
-.priority {
-  color: var(--ivory-white);
-}
+
 .icon:hover {
   border-radius: 50%;
   background-color: var(--grey-background);
@@ -15,12 +13,7 @@
   align-items: center;
   gap: 0.5rem;
 }
-.note_items {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
 .save_btn:hover {
   border-radius: 5px;
   padding: 0.5rem;

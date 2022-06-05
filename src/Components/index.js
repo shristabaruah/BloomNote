@@ -12,3 +12,4 @@ export {TrashIcon} from "./Icon/TrashIcon";
 export {LabelModal} from "./Label/LabelModal";
 export {InputLabel} from "./Label/InputLabel";
 export {LabelIcon} from "./Icon/LabelIcon";
+export {PalleteIcon} from"./Icon/PalleteIcon";

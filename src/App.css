@@ -42,8 +42,39 @@ body{
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
   );
-  z-index: 2;
 }
 .pg{
   margin: 5rem 0rem 0 14rem;
+}
+.purple{
+  background: var(--color-white);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 0, 255, 0.7),
+    rgba(255, 0, 255, 0.3)
+  );
+}
+.yellow{
+  background: var(--color-white);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 240, 0, 0.7),
+    rgba(255, 240, 0, 0.6)
+  );
+}
+.blue{
+  background: var(--color-white);
+  background: linear-gradient(
+    to left bottom,
+    rgba(45, 85, 255, 0.7),
+    rgba(45, 85, 255, 0.3)
+  );
+}
+.green{
+  background: var(--color-white);
+  background: linear-gradient(
+    to left bottom,
+    rgba(0, 228, 68, 0.7),
+    rgba(41, 248, 41, 0.3)
+  );
 }

@@ -1,14 +1,21 @@
+import { PalleteIcon, PriorityIcon } from "../Icon";
 import styles from "./Note-option.module.css";
 
-const AddNoteOption = ({ addNoteHandler }) => {
+const AddNoteOption = ({
+  addNoteHandler,
+  setNoteBg,
+  currentPriority,
+  setCurrentPriority,
+}) => {
   return (
     <>
       <div className={styles.note_option}>
-        <span className={styles.priority}>High</span>
-        <span className={`material-icons-outlined ${styles.icon}`}>
-          palette
-        </span>
-        <span className={`material-icons-outlined ${styles.icon}`}>label</span>
+        <PriorityIcon
+          setCurrentPriority={setCurrentPriority}
+          currentPriority={currentPriority}
+          styleData={{bottom:"-5rem"}}
+        />
+        <PalleteIcon setNoteBg={setNoteBg} styleData={{ bottom: "-4rem" }} />
       </div>
       <div>
         <span className={`btn ${styles.save_btn}`} onClick={addNoteHandler}>
