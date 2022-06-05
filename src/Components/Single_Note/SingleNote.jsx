@@ -4,7 +4,6 @@ import { Notedate } from "../../utils";
 import {
   ArchiveIcon,
   LabelIcon,
-  PalleteIcon,
   PriorityIcon,
   TrashIcon,
   UnarchiveIcon,
@@ -13,13 +12,11 @@ import { NoteModal } from "../NoteModal/NoteModal";
 import styles from "./Single_note.module.css";
 
 const SingleNote = ({ noteData }) => {
-  const { _id, noteTitle, noteText, date, label, bgColor, notePriority } =
+  const { _id, noteTitle, noteText, date, label,bgColor, notePriority } =
     noteData;
   const [editNote, setEditNote] = useState(false);
-  const [noteBg, setNoteBg] = useState(bgColor);
   const [currentPriority, setCurrentPriority] = useState(() => notePriority);
   const location = useLocation();
-  console.log("note",noteBg ,noteData.bgColor)
 
   useEffect(() => {
     setCurrentPriority(() => notePriority);
@@ -53,12 +50,7 @@ const SingleNote = ({ noteData }) => {
               noteId={_id}
               styleData={{bottom:"12rem"}}
             />
-            <PalleteIcon
-              noteId={noteData._id}
-              setNoteBg={setNoteBg}
-              styleData={{ bottom: "12rem" }}
-            />
-
+           
             <LabelIcon noteData={noteData} />
             {location.pathname === "/archive" ? (
               <UnarchiveIcon noteId={_id} />
