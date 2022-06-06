@@ -80,3 +80,60 @@ input[type="checkbox"] {
 .priority:hover {
   color: var(--ivory-white);
 }
+.filter_container {
+  position: absolute;
+  top: 9rem;
+  right: 16rem;
+  padding: 1rem;
+  background: var(--color-white);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: 2px solid var(--color-light-grey);
+  border-radius: 6px;
+}
+.filter_menu {
+  display: flex;
+  gap: 1rem;
+}
+.filter_header {
+  font-family: "Roboto slab", serif;
+  text-align: center;
+  color: var(--color-text1);
+}
+.filter_label {
+  font-size: 1.2rem;
+  color: var(--color-text1);
+  font-weight: 500;
+  padding: 0.5rem;
+}
+.filter_option {
+  text-align: center;
+}
+.filter_option > .filter_list {
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+}
+.filter_list:hover {
+  color: var(--color-text);
+}
+
+.filter {
+  cursor: pointer;
+}
+.clear {
+  font-size: 1.3rem;
+  color: var(--color-text1);
+  font-weight: 600;
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.clear:hover {
+  background-color: var(--color-light-grey);
+}
