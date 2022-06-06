@@ -4,3 +4,4 @@ export { LabelIcon } from "./LabelIcon";
 export { PalleteIcon } from "./PalleteIcon";
 export { TrashIcon } from "./TrashIcon";
 export {PriorityIcon} from "./PriorityIcon";
+export {FilterIcon} from "./FilterIcon";
