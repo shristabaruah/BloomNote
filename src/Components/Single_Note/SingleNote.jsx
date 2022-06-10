@@ -12,7 +12,7 @@ import { NoteModal } from "../NoteModal/NoteModal";
 import styles from "./Single_note.module.css";
 
 const SingleNote = ({ noteData }) => {
-  const { _id, noteTitle, noteText, date, label,bgColor, notePriority } =
+  const { _id, noteTitle, noteText, date, label, bgColor, notePriority } =
     noteData;
   const [editNote, setEditNote] = useState(false);
   const [currentPriority, setCurrentPriority] = useState(() => notePriority);
@@ -27,9 +27,6 @@ const SingleNote = ({ noteData }) => {
       <div className={`  ${styles.note} ${bgColor} glass`}>
         <div className={styles.title_content}>
           <h4 className={styles.title}>{noteTitle}</h4>
-          <span className={`material-icons-outlined ${styles.icon}`}>
-            push_pin
-          </span>
         </div>
 
         <p>{noteText}</p>
@@ -48,9 +45,9 @@ const SingleNote = ({ noteData }) => {
               setCurrentPriority={setCurrentPriority}
               currentPriority={currentPriority}
               noteId={_id}
-              styleData={{bottom:"12rem"}}
+              styleData={{ bottom: "12rem" }}
             />
-           
+
             <LabelIcon noteData={noteData} />
             {location.pathname === "/archive" ? (
               <UnarchiveIcon noteId={_id} />
