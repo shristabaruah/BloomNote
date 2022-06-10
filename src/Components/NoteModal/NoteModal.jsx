@@ -83,9 +83,6 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
             value={noteTitle}
             onChange={(e) => setNoteTitle(e.target.value)}
           />
-          <span className={`material-icons-outlined ${styles.icon}`}>
-            push_pin
-          </span>
         </div>
         <textarea
           className={`${styles.text_area} ${noteBg}`}
@@ -118,7 +115,6 @@ const NoteModal = ({ addNote, setModalOpen, noteData }) => {
               setNoteBg={setNoteBg}
               currentPriority={currentPriority}
               setCurrentPriority={setCurrentPriority}
-
             />
           )}
         </div>
